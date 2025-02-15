@@ -1,0 +1,23 @@
+spring:
+  name: common-stg
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/restorent_management_system
+    username: root
+    password: 1234
+    
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 10
+      idle-time-out: 30000
+      pool-name: common-pool-stg
+      max-life-time: 2000000
+      connection-time-out: 30000
+      auto-commit: true
+
+server:
+  servlet:
+    context-path: /common-api-stg
+  port: 3062	  
+	  
